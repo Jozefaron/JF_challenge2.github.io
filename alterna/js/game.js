@@ -228,10 +228,10 @@ function hasWon() {
 function gameOverMsg(won) {
     finalMsg.style.display = "flex"
     if (won) {
-        finalMsg.classList.remove("red")
-        finalMsg.classList.add("green")
+        
         finalMsg.textContent = `GANASTE`
     } else {
+        finalMsg.textContent = `PERDISTE`
         secretWordBox.style.display = "flex"
         secretWordBox.textContent = `La palabra era: ${keyWord}`
     }
