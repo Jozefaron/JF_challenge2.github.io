@@ -1,81 +1,151 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/logoa.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0a525ee5a7.js"></script>
-    <title>Juego Ahorcado | Movil</title>
-    <meta name="description" content="Adivina la palabra secreta">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style-1.css">
+  <link rel="stylesheet" href="css/doc.css">
+  <link href="/Fuente/Roboto-Bold.ttf" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logoa.png" type="image/x-icon" />
+  <title>Juego Ahorcado | Alura Challanges - Oracle ONE</title>
+  <meta name="description" content="Adivina la palabra secreta">
 
 </head>
 
-<body>
-    <div id="screen" class="screen-one"></div>
+<body onload="deteccion()">
+
+
+  <div id="contenedor">
     <header>
-        <div id="header-div">
-            <div id="logo-box">
-                <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="logo" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M23.3958 23.6529C23.3524 23.9311 23.2466 24.1959 23.0863 24.4275C22.926 24.659 22.7154 24.8512 22.4703 24.9898C21.9766 25.3086 21.5447 25.468 21.1077 25.6274C20.177 25.9488 19.1974 26.2702 18.1613 26.643C17.0687 27.0157 16.0891 27.3885 15.215 27.6585C14.1249 28.0313 13.0888 28.3526 12.1041 28.7254C11.3633 29.0425 10.6674 29.4556 10.0345 29.9544C9.44584 30.4877 8.93212 31.0983 8.50734 31.7695C8.07027 32.515 7.79518 33.4766 7.79518 34.5975C7.79518 36.842 8.34022 38.5491 9.43289 39.6161C10.523 40.7396 12.5438 41.2718 15.5389 41.2718C18.5933 41.2718 20.6655 40.6856 21.7607 39.5107C22.8482 38.3357 23.3932 36.6826 23.3932 34.5487V23.6529H23.3958ZM15.5415 0C20.8891 0 24.815 1.01553 27.3217 3.09802C29.831 5.12908 31.0856 7.74119 31.0856 10.8366V37.2148C31.0856 38.2817 30.8696 39.4567 30.4891 40.737C30.1035 42.0225 29.3425 43.1949 28.1418 44.2592C26.9977 45.3313 25.4166 46.2389 23.3984 46.933C21.3802 47.6272 18.7629 48 15.5441 48C12.3304 48 9.70798 47.6272 7.69234 46.933C5.6767 46.2389 4.09298 45.3313 2.9489 44.2592C1.8846 43.3001 1.07834 42.089 0.604178 40.737C0.218532 39.4592 0 38.2843 0 37.2174V33.001C0 30.7565 0.599036 28.674 1.79968 26.8563C3.00032 24.9898 4.68945 23.7095 6.8722 22.9073C7.96229 22.5345 9.21693 22.1618 10.6335 21.681C12.0527 21.1976 13.3588 20.7169 14.6699 20.2927C15.9811 19.8633 17.1252 19.434 18.1048 19.0586C18.6959 18.8221 19.2963 18.6094 19.9044 18.421L20.8866 17.9402C21.2722 17.7268 21.6501 17.4055 22.0332 16.9787C22.4137 16.5545 22.7402 16.0737 23.0153 15.5389C23.306 14.9599 23.4557 14.3203 23.4524 13.6724V11.9627C23.4564 11.3361 23.3249 10.716 23.0667 10.145C22.8508 9.5023 22.4137 8.91612 21.8147 8.38393C21.2156 7.84917 20.3955 7.42239 19.416 7.09845C18.4338 6.78222 17.1278 6.62025 15.6521 6.62025C12.5977 6.62025 10.5795 7.21157 9.48945 8.43535C8.5639 9.50488 8.01885 10.8392 7.91087 12.3329C7.91087 12.6543 7.63835 12.8677 7.30927 12.8677L0.658168 12.9757C0.500177 12.9764 0.348309 12.9146 0.235632 12.8039C0.122956 12.6931 0.0585941 12.5423 0.0565613 12.3844V10.8418C0.0565613 9.3429 0.331655 7.95458 0.930691 6.62025C1.5323 5.28334 2.46042 4.16497 3.71248 3.20086C4.96711 2.24189 6.60482 1.44231 8.56647 0.907552C10.4767 0.26481 12.8214 0 15.5466 0H15.5415Z"
-                        fill="rgb(7, 45, 100)"></path>
-                </svg>
-            </div>
-        </div>
+      <div class="logoE">
+        <svg width=30 height=40 viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="logo" fill-rule="evenodd" clip-rule="evenodd"
+            d="M23.3958 23.6529C23.3524 23.9311 23.2466 24.1959 23.0863 24.4275C22.926 24.659 22.7154 24.8512 22.4703 24.9898C21.9766 25.3086 21.5447 25.468 21.1077 25.6274C20.177 25.9488 19.1974 26.2702 18.1613 26.643C17.0687 27.0157 16.0891 27.3885 15.215 27.6585C14.1249 28.0313 13.0888 28.3526 12.1041 28.7254C11.3633 29.0425 10.6674 29.4556 10.0345 29.9544C9.44584 30.4877 8.93212 31.0983 8.50734 31.7695C8.07027 32.515 7.79518 33.4766 7.79518 34.5975C7.79518 36.842 8.34022 38.5491 9.43289 39.6161C10.523 40.7396 12.5438 41.2718 15.5389 41.2718C18.5933 41.2718 20.6655 40.6856 21.7607 39.5107C22.8482 38.3357 23.3932 36.6826 23.3932 34.5487V23.6529H23.3958ZM15.5415 0C20.8891 0 24.815 1.01553 27.3217 3.09802C29.831 5.12908 31.0856 7.74119 31.0856 10.8366V37.2148C31.0856 38.2817 30.8696 39.4567 30.4891 40.737C30.1035 42.0225 29.3425 43.1949 28.1418 44.2592C26.9977 45.3313 25.4166 46.2389 23.3984 46.933C21.3802 47.6272 18.7629 48 15.5441 48C12.3304 48 9.70798 47.6272 7.69234 46.933C5.6767 46.2389 4.09298 45.3313 2.9489 44.2592C1.8846 43.3001 1.07834 42.089 0.604178 40.737C0.218532 39.4592 0 38.2843 0 37.2174V33.001C0 30.7565 0.599036 28.674 1.79968 26.8563C3.00032 24.9898 4.68945 23.7095 6.8722 22.9073C7.96229 22.5345 9.21693 22.1618 10.6335 21.681C12.0527 21.1976 13.3588 20.7169 14.6699 20.2927C15.9811 19.8633 17.1252 19.434 18.1048 19.0586C18.6959 18.8221 19.2963 18.6094 19.9044 18.421L20.8866 17.9402C21.2722 17.7268 21.6501 17.4055 22.0332 16.9787C22.4137 16.5545 22.7402 16.0737 23.0153 15.5389C23.306 14.9599 23.4557 14.3203 23.4524 13.6724V11.9627C23.4564 11.3361 23.3249 10.716 23.0667 10.145C22.8508 9.5023 22.4137 8.91612 21.8147 8.38393C21.2156 7.84917 20.3955 7.42239 19.416 7.09845C18.4338 6.78222 17.1278 6.62025 15.6521 6.62025C12.5977 6.62025 10.5795 7.21157 9.48945 8.43535C8.5639 9.50488 8.01885 10.8392 7.91087 12.3329C7.91087 12.6543 7.63835 12.8677 7.30927 12.8677L0.658168 12.9757C0.500177 12.9764 0.348309 12.9146 0.235632 12.8039C0.122956 12.6931 0.0585941 12.5423 0.0565613 12.3844V10.8418C0.0565613 9.3429 0.331655 7.95458 0.930691 6.62025C1.5323 5.28334 2.46042 4.16497 3.71248 3.20086C4.96711 2.24189 6.60482 1.44231 8.56647 0.907552C10.4767 0.26481 12.8214 0 15.5466 0H15.5415Z"
+            fill="rgb(7, 45, 100)"></path>
+        </svg>
+      </div>
     </header>
 
-    <main class="flex-col-space">
-        <section id="begin-section" class="flex-col-center">
-            <button id="play-game" class="button blue"> Iniciar juego &nbsp;🕹️</button>
-            <button id="add-new-word" class="button grey">Agregar nueva palabra</button>
-        </section>
+    <div class="content">
+      <div class="content__container">
+        <p class="content__container__text">
+          Hello
+        </p>
 
-        <section id="new-word-section" class="flex-col-space">
-            <input id="new-word-input" type="text" placeholder="Escribe una palabra ..." autocomplete="off">
+        <ul class="content__container__list">
+          <li class="content__container__list__item">world</li>
+          <li class="content__container__list__item">welcome</li>
+          <li class="content__container__list__item">users</li>
+          <li class="content__container__list__item">everybody</li>
+        </ul>
+      </div>
+    </div>
 
-            <div id="new-word-buttons-box">
-                <div id="warning" class="flex-row-center">
-                    <p>🚫 Máximo 14 caracteres</p>
-                </div>
-                <div id="confirm-new-word"></div>
-                <button id="new-word-save" class="button blue">Guardar</button>
-                <button id="new-word-cancel" class="button grey">Empezar a jugar &nbsp;🕹️</button>
-            </div>
-        </section>
-
-        <section id="game-section" class="flex-col-center">
-
-            <div id="hanged-box">
-                <canvas width="355" height="355"></canvas>
-                <div id="final-msg-box" class="flex-col-center"></div>
-            </div>
-            <div id="right-words-box" class="flex-col-center"></div>
-            <div id="wrong-words-box" class="flex-col-center"></div>
-            <div id="secret-word-box" class="flex-col-center"></div>
-            <div id="keyboard-box">
-                <div id="line1" class="flex-row-center"></div>
-                <div id="line2" class="flex-row-center"></div>
-                <div id="line3" class="flex-row-center"></div>
-            </div>
-            <div id="game-buttons-box">
-                <button id="new-game" class="button blue">Nuevo juego</button>
-                <button id="desist" class="button grey" onclick="location.href='/index.html'">Desistir</button>
-            </div>
-        </section>
-
+    <main>
+      <section>
+        <button id="play" onclick="location.href='juego.html'" class="button blue"> Iniciar juego &nbsp;🕹️</button>
+        <button id="palabra" class="button grey" onclick="add()">Agregar nueva palabra</button>
+      </section>
     </main>
 
-    <footer id="footer1" class="flex-col-center"></footer>
+    <section>
 
-    <script src="js/words-list.js"></script>
-    <script src="js/new-word.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/script.js"></script>
+      <div id="agrega-txt">
+        <textarea id="areatxt" name="res" style="display:none" placeholder="Escribe una palabra ..." autocomplete="off"
+          onKeyUp="this.value=this.value.toUpperCase();"></textarea>
+
+        <div id="warning" style="display: none;">
+          <p>🚫 Máximo 14 caracteres</p>
+        </div>
+
+        <div id="confirm-new-word"></div>
+        <button id="add-palabra" style="display: none;" class="button add" onclick="addNewWord()">Agregar
+          palabra</button>
+        <button id="jugar" style="display: none;" class="button ccr" onclick="location.href='juego.html'">Jugar</button>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrapper">
+      <div class="wrapper__links">
+        <a class="social-link social-link--github" href="https://github.com/Jozefaron" id="github">
+          <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <title>
+              github
+            </title>
+            <g class="social-group" fill="none" fill-rule="evenodd">
+              <circle class="social-group__outline" stroke="#000" stroke-width="20" cx="300" cy="300" r="262.5" />
+              <circle class="social-group__inner-circle" fill="#000" cx="300" cy="300" r="252.5" />
+              <path class="social-group__icon"
+                d="M300 150c-82.8348 0-150 68.8393-150 153.817 0 67.9687 42.991 125.558 102.5893 145.9151 7.5 1.4063 10.2455-3.3482 10.2455-7.433 0-3.683-.134-13.3259-.2009-26.183-41.7187 9.308-50.558-20.625-50.558-20.625-6.8304-17.7456-16.6741-22.5-16.6741-22.5-13.5938-9.576 1.0044-9.375 1.0044-9.375 15.067 1.0714 22.9688 15.8705 22.9688 15.8705 13.3929 23.5045 35.0893 16.741 43.6607 12.7902 1.3393-9.9107 5.2232-16.741 9.509-20.558-33.2813-3.884-68.3036-17.076-68.3036-76.0045 0-16.808 5.8259-30.5357 15.4018-41.25-1.5402-3.884-6.6965-19.5536 1.4732-40.7143 0 0 12.5893-4.1518 41.25 15.7366 11.9866-3.4152 24.7768-5.0893 37.567-5.1562 12.7231.067 25.5803 1.741 37.5669 5.1562 28.6607-19.8884 41.183-15.7366 41.183-15.7366 8.1697 21.1607 3.0134 36.8304 1.4733 40.7143 9.5758 10.7812 15.4017 24.509 15.4017 41.25 0 59.0625-35.0892 72.0536-68.5044 75.8705 5.3571 4.7545 10.1785 14.1295 10.1785 28.4598 0 20.558-.2009 37.1652-.2009 42.1875 0 4.0849 2.6786 8.9063 10.3125 7.3661C407.076 429.308 450 371.7187 450 303.817 450 218.8393 382.8348 150 300 150z"
+                fill="#FFF" fill-rule="nonzero" />
+            </g>
+          </svg>
+        </a>
+        <a class="social-link social-link--linkedin" href="https://www.linkedin.com/in/jozef-aar%C3%B3n-652b63222"
+          id="linkedin">
+          <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <title>
+              linkedin
+            </title>
+            <g class="social-group" fill="none" fill-rule="evenodd">
+              <circle class="social-group__outline" stroke="#000" stroke-width="20" cx="300" cy="300" r="262.5" />
+              <circle class="social-group__inner-circle" fill="#2D76B0" cx="300" cy="300" r="252.5" />
+              <path class="social-group__icon"
+                d="M278.9308 253.1923h43.5769v20.0539h.5923c6.0923-11.5077 20.9-23.6077 43.0692-23.6077 46.0308 0 54.577 30.2923 54.577 69.723v80.2154h-45.4385v-71.1615c0-17.0077-.2539-38.8385-23.6077-38.8385-23.6923 0-27.2462 18.5308-27.2462 37.5693v72.4307h-45.4384l-.0846-146.3846zm-74.1231 0h45.523V399.577h-45.523V253.1923zm22.8461-72.7692c14.5539 0 26.4 11.8461 26.4 26.4 0 14.5538-11.8461 26.4-26.4 26.4-14.6384 0-26.4-11.8462-26.4-26.4 0-14.5539 11.7616-26.4 26.4-26.4z"
+                fill="#000" fill-rule="nonzero" />
+            </g>
+          </svg>
+        </a>
+        <a class="social-link social-link--instagram" id="instagram" href="https://www.instagram.com/jose_aron19/">
+          <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <title>
+              instagram
+            </title>
+            <defs>
+              <linearGradient x1="0%" y1="100%" y2="0%" id="simpleInsta">
+                <stop stop-color="#D72F3F" offset="0%" />
+                <stop stop-color="#4221B9" offset="100%" />
+              </linearGradient>
+            </defs>
+            <g class="social-group" fill="none" fill-rule="evenodd">
+              <circle class="social-group__outline" stroke="#000" stroke-width="20" cx="300" cy="300" r="262.5" />
+              <circle class="social-group__inner-circle social-group__inner-circle--instagram" fill="url(#simpleInsta)"
+                cx="300" cy="300" r="252.5" />
+              <path class="social-group__icon"
+                d="M436.8577 205.4154c-3.6808-9.4808-8.5885-17.5116-16.6192-25.5423-8.0308-8.0308-16.0616-12.9385-25.5423-16.6193-9.1462-3.5692-19.7424-6.023-35.0231-6.6923-15.3923-.6692-20.3-.8923-59.5616-.8923-39.2615 0-44.1692.1116-59.5615.8923-15.3923.6693-25.877 3.1231-35.023 6.6923-9.4808 3.6808-17.5116 8.5885-25.5424 16.6193-8.0308 8.0307-12.9384 16.0615-16.6192 25.5423-3.5692 9.1461-6.023 19.7423-6.6923 35.023-.6693 15.3924-.8923 20.3-.8923 59.5616 0 39.2615.1115 44.1692.8923 59.5615.6692 15.3923 3.123 25.877 6.6923 35.0231 3.6808 9.4808 8.5884 17.5116 16.6192 25.5423 8.0308 8.0308 16.0616 12.9385 25.5423 16.6193 9.1462 3.5692 19.7423 6.023 35.0231 6.6923 15.3923.6692 20.3.8923 59.5615.8923 39.2616 0 44.1693-.1116 59.5616-.8923 15.3923-.6693 25.8769-3.1231 35.023-6.6923 9.4808-3.6808 17.5116-8.5885 25.5424-16.6193 8.0307-8.0307 12.9384-16.0615 16.6192-25.5423 3.5692-9.1461 6.023-19.7423 6.6923-35.023.6692-15.3924.8923-20.3.8923-59.5616 0-39.2615-.1115-44.1692-.8923-59.5615-.6692-15.3923-3.123-25.877-6.6923-35.0231zm-19.2962 152.9192c-.6692 14.0539-3.0115 21.75-5.0192 26.7692-2.5654 6.6924-5.8 11.6-10.8192 16.6193-5.0193 5.0192-9.8154 8.1423-16.6193 10.8192-5.1307 2.0077-12.7153 4.35-26.7692 5.0192-15.2808.6693-19.7423.8923-58.3346.8923s-43.1654-.1115-58.3346-.8923c-14.0539-.6692-21.75-3.0115-26.7692-5.0192-6.6924-2.5654-11.6-5.8-16.6193-10.8192-5.0192-5.0193-8.1423-9.8154-10.8192-16.6193-2.0077-5.1307-4.35-12.7153-5.0192-26.7692-.6693-15.2808-.8923-19.8538-.8923-58.3346s.1115-43.1654.8923-58.3346c.6692-14.0539 3.0115-21.75 5.0192-26.7692 2.5654-6.6924 5.8-11.6 10.8192-16.6193 5.0193-5.0192 9.8154-8.1423 16.6193-10.8192 5.1307-2.0077 12.7153-4.35 26.7692-5.0192 15.2808-.6693 19.8538-.8923 58.3346-.8923s43.1654.1115 58.3346.8923c14.0539.6692 21.75 3.0115 26.7692 5.0192 6.6924 2.5654 11.6 5.8 16.6193 10.8192 5.0192 5.0193 8.1423 9.8154 10.8192 16.6193 2.0077 5.1307 4.35 12.7153 5.0192 26.7692.6693 15.2808.8923 19.8538.8923 58.3346s-.223 43.1654-.8923 58.3346zM300 225.827c-40.9346 0-74.173 33.2385-74.173 74.1731s33.2384 74.173 74.173 74.173 74.173-33.2384 74.173-74.173-33.2384-74.173-74.173-74.173zm0 122.3577c-26.5462 0-48.1846-21.527-48.1846-48.1846 0-26.5462 21.527-48.1846 48.1846-48.1846 26.6577 0 48.1846 21.527 48.1846 48.1846 0 26.5462-21.6384 48.1846-48.1846 48.1846zm77.073-107.9692c-9.548 0-17.2884-7.7403-17.2884-17.2885 0-9.5481 7.7403-17.2884 17.2885-17.2884 9.5481 0 17.2884 7.7403 17.2884 17.2884 0 9.5482-7.7403 17.2885-17.2884 17.2885z"
+                fill="#FFF" fill-rule="nonzero" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    window.addEventListener("load", function deteccion() {
+
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        this.alert("Se cambiara a la version de dispositivos moviles :D")
+        window.location.href = '/alterna/inicio.html';
+      }
+
+    });
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/new.js"></script>
+
 </body>
+
+
 
 </html>
